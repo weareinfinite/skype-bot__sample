@@ -1,13 +1,13 @@
-var restify = require('restify');
 var builder = require('botbuilder');
+var express = require('express');
 require('dotenv').config()
 // Create server
 
-const server = restify.createServer()
+const server = express();
 
 
 server.listen(3000, () => {
-    console.log('%s listening to %s', server.name, server.url)
+    console.log('Bot Server listening on port 3000')
 })
 
 // Create chat connector for communicating with the Bot Framework Service
